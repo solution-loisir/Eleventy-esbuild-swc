@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" id="page-top" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+    <title>{{ title if site.genericTitle + " - " + title else site.genericTitle }}</title>
+    <meta name="description" content="{{ description if description else site.description }}" />
+    {#
+    <link rel="icon" type="image/x-icon" href="{{ site.base }}/favicon.ico" sizes="16x16 32x32 48x48 256x256" />
+    <link rel="icon" type="image/png" href="{{ site.base }}/images/favicon/favicon_192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="{{ site.base }}/images/favicon/favicon_192.png" />
+    #}
+    <script>document.documentElement.classList.remove("no-js");</script>
+    <link rel="stylesheet" type="text/css" href="/style/index.css" />
+    <link rel="canonical" href="" />
+
+    <script type="module" src="/js/index.js"></script>
+    {% if site.eleventyEnv === "prod" %}
+      <script defer nomodule src="/js/legacy.js"></script>
+    {% endif %}
+</head>
+<body>
+    {% include "partials/header.njk" %}
+    {{ content | safe }}
+    {% include "partials/footer.njk" %}
+</body>
+</html>
