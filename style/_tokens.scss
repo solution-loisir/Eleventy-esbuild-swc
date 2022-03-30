@@ -1,0 +1,22 @@
+@use "sass:map";
+
+$base-size: 1rem;
+
+$size-scale: (
+  "75": $base-size * 0.75,
+  "100": $base-size,
+  "125": $base-size * 1.25,
+  "150": $base-size * 1.5,
+  "200": $base-size * 2,
+  "300": $base-size * 3
+);
+
+@function get-size($size) {
+  $result: map.get($size-scale, $size);
+
+  @if $result {
+    @return $result;
+  } @else {
+    @warn "Not matching size scale.";
+  }
+}

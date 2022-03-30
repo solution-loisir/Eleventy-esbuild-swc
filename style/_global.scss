@@ -1,0 +1,12 @@
+@use "./tokens" as *;
+
+body {
+  line-height: 1.5;
+  overflow-x: hidden;
+  padding-bottom: get-size("150");
+  font-size: get-size("100");
+}
+
+nav ul[role='list'] li a {
+  text-decoration: none;
+}

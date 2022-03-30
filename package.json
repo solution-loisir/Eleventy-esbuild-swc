@@ -10,7 +10,12 @@
     "dev:eleventy": "npx @11ty/eleventy --serve",
     "dev:sass": "sass --watch style:_site/style",
     "dev:esbuild": "node esbuild.js",
-    "start": "npm-run-all --parallel dev:*"
+    "start": "npm-run-all --parallel dev:*",
+    "vscode": "code",
+    "code": "run-s vscode start",
+    "clean": "if [ -d _site ]; then rm -rf _site; fi",
+    "clean:start": "run-s clean start",
+    "debug:11ty": "DEBUG=Eleventy* npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
