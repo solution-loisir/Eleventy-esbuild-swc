@@ -14,7 +14,7 @@ $gorko-colors: (
   'light': #f3f3f3
 );
 
-@use "../node_modules/gorko/gorko.scss" with (
+@use "../node_modules/gorko/gorko" with (
 
 $gorko-config: (
   'bg': (
