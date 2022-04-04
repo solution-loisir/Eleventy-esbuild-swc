@@ -1,4 +1,5 @@
-@use "reset";
+@use "../node_modules/modern-css-reset/dist/reset.css";
+@use "gorko";
 @use "global";
 @use "utilities/flow";
 @use "blocks/header";

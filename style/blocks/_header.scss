@@ -1,11 +1,11 @@
-@use "../tokens" as *;
+@use "../gorko";
 
 .header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: get-size("100") get-size("150");
+  padding: gorko.get-size("400") gorko.get-size("900");
   ul {
     display: flex;
     flex-wrap: wrap;

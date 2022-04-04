@@ -1,9 +1,9 @@
-@use "../tokens" as *;
+@use "../gorko";
 
 .flow > * + * {
-  margin-top: var(--flow-space, get-size("100"));
+  margin-top: var(--flow-space, gorko.get-size("400"));
 }
 
 .inline-flow > * + * {
-  margin-left: var(--inline-flow-space, get-size("100"));
+  margin-left: var(--inline-flow-space, gorko.get-size("400"));
 }

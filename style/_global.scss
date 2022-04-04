@@ -1,10 +1,11 @@
-@use "./tokens" as *;
+//@use "./tokens" as *;
+@use "gorko";
 
 body {
   line-height: 1.5;
   overflow-x: hidden;
-  padding-bottom: get-size("150");
-  font-size: get-size("100");
+  padding-bottom: gorko.get-size("600");
+  font-size: gorko.get-size("400");
 }
 
 nav ul[role='list'] li a {
