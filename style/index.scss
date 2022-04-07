@@ -1,5 +1,5 @@
 @use "../node_modules/modern-css-reset/dist/reset";
-@use "gorko";
 @use "global";
+@use "gorko";
 @use "utilities/flow";
-@use "utilities/wrap.scss";
+@use "utilities/wrap";
