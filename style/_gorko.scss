@@ -21,6 +21,7 @@ $keywords: (
 $sizes-and-keywords: map.merge($gorko-size-scale, $keywords);
 
 $gorko-colors: (
+  'primary': #df383800,
   'dark': #1a1a1a,
   'light': #f3f3f3
 );
@@ -54,6 +55,42 @@ $gorko-config: (
     ),
     'output': 'standard',
     'property': 'font-family'
+  ),
+  'justify': (
+    'items': (
+      'between': 'space-between',
+      'around': 'space-around',
+      'end': 'flex-end',
+      'center': 'center'
+    ),
+    'output': 'responsive',
+    'property': 'justify-content'
+  ),
+  'align': (
+    'items': (
+      'start': 'flex-start',
+      'center': 'center',
+      'end': 'flex-end'
+    ),
+    'output': 'responsive',
+    'property': 'align-items'
+  ),
+  'direction': (
+    'items': (
+      'row': row,
+      'column': 'column'
+    ),
+    'output': 'responsive',
+    'property': 'flex-direction'
+  ),
+  'measure': (
+    'items': (
+      'long': '75ch',
+      'medium': '60ch',
+      'short': '40ch'
+    ),
+    'output': 'standard',
+    'property': 'max-width'
   ),
   'gap-top': (
     'items': $sizes-and-keywords,
@@ -133,7 +170,8 @@ $gorko-config: (
   'breakpoints': (
     'sm': '(min-width: 36em)',
     'md': '(min-width: 48em)',
-    'lg': '(min-width: 62em)'
+    'lg': '(min-width: 62em)',
+    'xl': '(min-width: 75em)'
   )
 )
 );
