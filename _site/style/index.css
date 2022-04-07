@@ -133,6 +133,18 @@ select {
   margin-top: 3rem;
 }
 
+.gap-top-initial {
+  margin-top: initial;
+}
+
+.gap-top-inherit {
+  margin-top: inherit;
+}
+
+.gap-top-auto {
+  margin-top: auto;
+}
+
 .gap-right-300 {
   margin-right: 0.8rem;
 }
@@ -155,6 +167,18 @@ select {
 
 .gap-right-900 {
   margin-right: 3rem;
+}
+
+.gap-right-initial {
+  margin-right: initial;
+}
+
+.gap-right-inherit {
+  margin-right: inherit;
+}
+
+.gap-right-auto {
+  margin-right: auto;
 }
 
 .gap-bottom-300 {
@@ -181,6 +205,18 @@ select {
   margin-bottom: 3rem;
 }
 
+.gap-bottom-initial {
+  margin-bottom: initial;
+}
+
+.gap-bottom-inherit {
+  margin-bottom: inherit;
+}
+
+.gap-bottom-auto {
+  margin-bottom: auto;
+}
+
 .gap-left-300 {
   margin-left: 0.8rem;
 }
@@ -203,6 +239,18 @@ select {
 
 .gap-left-900 {
   margin-left: 3rem;
+}
+
+.gap-left-initial {
+  margin-left: initial;
+}
+
+.gap-left-inherit {
+  margin-left: inherit;
+}
+
+.gap-left-auto {
+  margin-left: auto;
 }
 
 .pad-top-300 {
@@ -229,6 +277,18 @@ select {
   padding-top: 3rem;
 }
 
+.pad-top-initial {
+  padding-top: initial;
+}
+
+.pad-top-inherit {
+  padding-top: inherit;
+}
+
+.pad-top-auto {
+  padding-top: auto;
+}
+
 .pad-right-300 {
   padding-right: 0.8rem;
 }
@@ -251,6 +311,18 @@ select {
 
 .pad-right-900 {
   padding-right: 3rem;
+}
+
+.pad-right-initial {
+  padding-right: initial;
+}
+
+.pad-right-inherit {
+  padding-right: inherit;
+}
+
+.pad-right-auto {
+  padding-right: auto;
 }
 
 .pad-bottom-300 {
@@ -277,6 +349,18 @@ select {
   padding-bottom: 3rem;
 }
 
+.pad-bottom-initial {
+  padding-bottom: initial;
+}
+
+.pad-bottom-inherit {
+  padding-bottom: inherit;
+}
+
+.pad-bottom-auto {
+  padding-bottom: auto;
+}
+
 .pad-left-300 {
   padding-left: 0.8rem;
 }
@@ -299,6 +383,18 @@ select {
 
 .pad-left-900 {
   padding-left: 3rem;
+}
+
+.pad-left-initial {
+  padding-left: initial;
+}
+
+.pad-left-inherit {
+  padding-left: inherit;
+}
+
+.pad-left-auto {
+  padding-left: auto;
 }
 
 .stack-300 {
@@ -370,7 +466,7 @@ select {
 }
 
 .width-third {
-  width: 33.3333333333%;
+  width: 33%;
 }
 
 @media (min-width: 36em) {
@@ -427,7 +523,7 @@ select {
   }
 
   .sm\:width-third {
-    width: 33.3333333333%;
+    width: 33%;
   }
 }
 @media (min-width: 48em) {
@@ -484,7 +580,7 @@ select {
   }
 
   .md\:width-third {
-    width: 33.3333333333%;
+    width: 33%;
   }
 }
 @media (min-width: 62em) {
@@ -541,7 +637,7 @@ select {
   }
 
   .lg\:width-third {
-    width: 33.3333333333%;
+    width: 33%;
   }
 }
 /* GORKO: auto-generated utility classes end */
