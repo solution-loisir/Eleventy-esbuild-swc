@@ -32,14 +32,14 @@ $gorko-config: (
   'bg': (
     'items': $gorko-colors,
     'output': 'standard',
-    'property': 'background'
+    'property': 'background-color'
   ),
   'color': (
     'items': $gorko-colors,
     'output': 'standard',
     'property': 'color'
   ),
-  'box': (
+  'display': (
     'items': (
       'block': 'block',
       'flex': 'flex',
@@ -83,15 +83,13 @@ $gorko-config: (
     'output': 'responsive',
     'property': 'flex-direction'
   ),
-  'grid': (
+  'flex-wrap': (
     'items': (
-      '2 > *': '0 0 49%',
-      '3 > *': '0 0 32%',
-      '4 > *': '0 0 24%',
-      '5 > *': '0 0 19%'
+      'yes': 'wrap',
+      'no': 'nowrap',
     ),
-    'output': 'standard',
-    'property': 'flex'
+    'output': 'responsive',
+    'property': 'flex-wrap',
   ),
   'measure': (
     'items': (
@@ -160,7 +158,6 @@ $gorko-config: (
   ),
   'weight': (
     'items': (
-      'light': '300',
       'regular': '400',
       'bold': '700'
     ),
@@ -178,6 +175,7 @@ $gorko-config: (
     'property': 'width'
   ),
   'breakpoints': (
+    'xs': '(min-width: 25em)',
     'sm': '(min-width: 36em)',
     'md': '(min-width: 48em)',
     'lg': '(min-width: 62em)',

@@ -5,7 +5,14 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   padding-bottom: gorko.get-size("600");
-  font-size: gorko.get-size("400");
+}
+
+a {
+  display: inline-block;
+}
+
+ul[role='list'] {
+  padding: 0;
 }
 
 nav ul[role='list'] li a {
