@@ -1,0 +1,20 @@
+@use "../tokens";
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: tokens.$size-400;
+  padding-bottom: tokens.$size-400;
+
+  &__logo {
+    padding-left: tokens.$size-900;
+  }
+
+  &__nav {
+    @media(min-width: tokens.$sm) {
+      margin-right: tokens.$size-900;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@use "../tokens";
+
+.flex-nav {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: tokens.$size-400;
+
+    @media(min-width: tokens.$sm) {
+      flex-direction: row;
+    }
+  }
+
+
+  &,
+  & li,
+  & li a {
+    width: 100%;
+    text-align: center;
+
+    @media(min-width: tokens.$sm) {
+      width: initial;
+    }
+  }
+}

@@ -1,6 +1,5 @@
+@use "tokens";
 @use "../node_modules/modern-css-reset/dist/reset";
 @use "global";
-@use "gorko";
-@use "utilities/flow";
-@use "utilities/wrap";
-@use "blocks/page-header";
+@use "display-blocks/page-header";
+@use "components/flex-nav";

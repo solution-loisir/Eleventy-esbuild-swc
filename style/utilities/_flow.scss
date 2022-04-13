@@ -1,9 +1,0 @@
-@use "../gorko";
-
-.flow > * + * {
-  margin-top: var(--flow-space, gorko.get-size("400"));
-}
-
-.inline-flow > * + * {
-  margin-left: var(--inline-flow-space, gorko.get-size("400"));
-}
