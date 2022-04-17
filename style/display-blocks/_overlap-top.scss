@@ -1,0 +1,15 @@
+@use "../tokens";
+
+.overlap-top {
+  display: grid;
+  grid-template-columns: 100vw;
+
+  &:first-child {
+    background-color: var(--color-primary);
+    height: 10vh;
+  }
+
+  &:nth-child(2) {
+    grid-row: 1 / 2;
+  }
+}

@@ -9,6 +9,10 @@
 
     @media(min-width: tokens.$sm) {
       flex-direction: row;
+      margin-top: var(--flex-nav-margin-top, unset);
+      margin-right: var(--flex-nav-margin-right, unset);
+      margin-bottom: var(--flex-nav-margin-bottom, unset);
+      margin-left: var(--flex-nav-margin-left, unset);
     }
   }
 

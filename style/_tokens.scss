@@ -1,10 +1,14 @@
-$color-primary: #df383800;
+@use "sass:color";
+
+$color-primary: #64e953;
 $base-size: 1rem;
 
 :root {
-  --color-primary: $color-primary;
-  --color-dark: #1a1a1a;
-  --color-light: #f3f3f3;
+  --color-primary: #{$color-primary};
+  --color-accent: #FD5A62;
+  --color-dark: #333333;
+  --color-light: #fcfcfc;
+  --color-white: #fff;
 }
 
 // Sizes
@@ -29,3 +33,10 @@ $font-base: Helvetica, Arial, sans-serif;
 $radius-standard: 3px;
 $radius-pill: 1em;
 $radius-round: 50%;
+
+// Width
+$width-large: 80ch;
+$width-medium: 65ch;
+
+// Shadow
+$shadow-card: 0 19px 38px #0000004d, 0 15px 12px #00000038;
