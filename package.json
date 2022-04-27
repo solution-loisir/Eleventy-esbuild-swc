@@ -34,12 +34,15 @@
   "homepage": "https://github.com/solution-loisir/Eleventy-esbuild-swc#readme",
   "dependencies": {
     "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "jsdom": "^19.0.0",
     "petite-vue": "^0.4.1"
   },
   "devDependencies": {
     "@11ty/eleventy-img": "^2.0.0",
     "@swc/cli": "^0.1.57",
     "@swc/core": "^1.2.161",
+    "@zachleat/details-utils": "^2.0.2",
     "browserslist": "^4.20.2",
     "core-js": "^3.21.1",
     "esbuild": "^0.14.28",

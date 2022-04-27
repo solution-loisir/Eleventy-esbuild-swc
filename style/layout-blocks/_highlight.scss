@@ -1,0 +1,9 @@
+@use "../tokens";
+
+.highlight {
+  --flow-space: #{tokens.$size-700};
+  //color: var(--color-light);
+  background-color: var(--color-accent);
+  //background: linear-gradient(170deg, rgba(229,82,171,1) 0%, rgba(236,126,193,1) 50%, rgba(246,193,225,1) 100%);
+  min-height: 250px;
+}

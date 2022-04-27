@@ -6,6 +6,9 @@ $base-size: 1rem;
 :root {
   --color-primary: #{$color-primary};
   --color-accent: #FD5A62;
+  --color-third: #E552AB;
+  --color-third-light-900: #{color.adjust(#E552AB, $lightness: 25%)};
+  --color-third-light-700: #{color.adjust(#E552AB, $lightness: 10%)};
   --color-dark: #333333;
   --color-light: #fcfcfc;
   --color-white: #fff;

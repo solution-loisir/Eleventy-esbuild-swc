@@ -1,0 +1,22 @@
+---
+layout: layouts/code-exemple.njk
+style: nostyle
+---
+<style scoped>
+  .my-title {
+    color: greenyellow;
+  }
+</style>
+
+<div id="code-exemple-html">
+
+<h1 class="my-title">Title</h1>
+</div>
+
+<script>
+  const title = document.querySelector(".my-title");
+
+  document.addEventListener("click", () => {
+    title.classList.toggle("my-title");
+  });
+</script>

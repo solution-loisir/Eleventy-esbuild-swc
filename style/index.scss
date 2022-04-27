@@ -1,8 +1,11 @@
 @use "tokens";
 @use "../node_modules/modern-css-reset/dist/reset";
 @use "global";
-@use "display-blocks/page-header";
-@use "display-blocks/overlap-top";
+@use "utilities/flow";
+@use "utilities/wrapper";
+@use "layout-blocks/page-header";
+@use "layout-blocks/overlap-page-header";
+@use "layout-blocks/highlight";
 @use "components/flex-nav";
 @use "components/grids";
 @use "components/cards";

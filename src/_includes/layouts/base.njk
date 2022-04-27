@@ -11,7 +11,10 @@
     <link rel="apple-touch-icon" href="{{ site.canonical }}/images/favicon/favicon_192.png" />
     #}
     <script>document.documentElement.classList.remove("no-js");</script>
+    {% if style !== "nostyle" %}
     <link rel="stylesheet" type="text/css" href="/style/index.css" />
+    {% endif %}
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet" />
     <link rel="canonical" href="{{ site.canonical }}" />
 
     <script type="module" src="/js/index.js"></script>
@@ -20,8 +23,6 @@
     {% endif %}
 </head>
 <body>
-    {% include "partials/header.njk" %}
-    {{ content | safe }}
-    {% include "partials/footer.njk" %}
+  {{ content | safe }}
 </body>
 </html>

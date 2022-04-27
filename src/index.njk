@@ -1,10 +1,10 @@
 ---
-layout: layouts/base.njk
-title: "Home"
+layout: layouts/page.njk
+title: Home
 ---
-<main>
+<main class="home-main flow">
+
 <div class="overlap-top">
-  <div></div>
 
   <div class="grid-auto-3 card-standard-auto">
     <div>
@@ -20,5 +20,17 @@ title: "Home"
       <p>Service description.</p>
     </div>
   </div>
+
 </div>
+
+<div class="highlight">
+  <div class="wrapper">
+    <h1>Highlight</h1>
+  </div>
+</div>
+
+{% test 
+url = "src/code-exemples/test.html"
+%}
+
 </main>

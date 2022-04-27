@@ -1,0 +1,12 @@
+@use "../tokens";
+
+.wrapper {
+  max-width: var(--wrapper-measure, #{tokens.$width-medium});
+  margin-right: var(--wrapper-margin-right, #{tokens.$size-400});
+  margin-left: var(--wrapper-margin-left, #{tokens.$size-400});
+
+  @media(min-width: tokens.$sm) {
+    margin-right: var(--sm-wrapper-margin-right, auto);
+    margin-left: var(--sm-wrapper-margin-left, auto);
+  }
+}
