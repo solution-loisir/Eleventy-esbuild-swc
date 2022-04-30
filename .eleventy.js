@@ -9,6 +9,9 @@ const test = require("./shortcodes/test");
 // Markdown
 const markdownIt = require('markdown-it');
 
+// Config
+const { configObject } = require("./src/_data/site");
+
 module.exports = function(config) {
   // Passing through
   config.addPassthroughCopy("images");
@@ -29,15 +32,5 @@ module.exports = function(config) {
   }).disable("code"));
 
    // Configuration
-  return {
-    dir: {
-        input: "src",
-        output: "_site"
-    },
-    pathPrefix: "/",
-    dataTemplateEngine: "njk",
-    htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk",
-    templateFormats: ["njk", "md", "html"]
-  }
+  return configObject;
 }

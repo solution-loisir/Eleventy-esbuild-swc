@@ -1,9 +1,11 @@
 const { pairedShortcode } = require("@11ty/eleventy-plugin-syntaxhighlight");
 const fs = require("fs");
+const path = require("path");
+const { input } = require("../src/_data/site").configObject.dir;
 const { JSDOM } = require("jsdom");
 
-module.exports = async ({ url }) => {
-  const htmlString = fs.readFileSync(url).toString();
+module.exports = async function(exemplePath) {
+  const htmlString = fs.readFileSync(path.join(input, exemplePath)).toString();
   const dom = new JSDOM(htmlString).window.document;
     
 
@@ -46,6 +48,6 @@ module.exports = async ({ url }) => {
     </template>
   </live-code-result>
 
-  <iframe src="http://localhost:8080/code-exemples/test/"></iframe>
+  <iframe src="${path.join(path.dirname(exemplePath), path.basename(exemplePath, path.extname(exemplePath)))}"></iframe>
 </section>`;
 }
