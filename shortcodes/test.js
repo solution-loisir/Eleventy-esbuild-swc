@@ -22,6 +22,6 @@ module.exports = async function({ css, html, js }) {
   
   <h2>RESULT</h2>
 
-  <iframe srcdoc='<style>${css}</style>${html}<script>${js}</script>'></iframe>
+  <iframe srcdoc='<style>${css}</style>${html}<script>${js}</script>' sandbox="allow-scripts" seamless></iframe>
 </section>`;
 }
