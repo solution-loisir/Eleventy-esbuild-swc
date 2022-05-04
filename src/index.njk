@@ -29,6 +29,18 @@ title: Home
   </div>
 </div>
 
-{% test "/code-exemples/test.html" %}
+{% test 
+html = ('<div>
+  <h1 class="my-title">Title</h1>
+</div>'),
+css = ('.my-title {
+  color: greenyellow;
+}'),
+js = ('const title = document.querySelector(".my-title");
+
+document.addEventListener("click", () => {
+  title.classList.toggle("my-title");
+});')
+%}
 
 </main>

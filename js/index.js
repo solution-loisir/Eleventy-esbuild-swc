@@ -1,4 +1,5 @@
 import { liveCodeResult } from "./custom-elements/live-code-result.js";
+import "@zachleat/details-utils";
 
 if(document.querySelector("live-code-result")) {
   document.addEventListener("DOMContentLoaded", () => {
