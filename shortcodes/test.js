@@ -3,6 +3,7 @@ const { pairedShortcode } = require("@11ty/eleventy-plugin-syntaxhighlight");
 module.exports = async function({ css, html, js }) {
 
   return `<section class="code-example">
+  <exemple-editable>
   <h1>Code exemple</h1>
 
   <details-utils animate>
@@ -22,6 +23,7 @@ module.exports = async function({ css, html, js }) {
   
   <h2>RESULT</h2>
 
-  <iframe srcdoc='<style>${css}</style>${html}<script>${js}</script>' sandbox="allow-scripts" seamless></iframe>
+  <iframe srcdoc='<body><style>${css}</style><div class="exemple-result-html">${html}</div><script>${js}</script></body>'></iframe>
+  </exemple-editable>
 </section>`;
 }

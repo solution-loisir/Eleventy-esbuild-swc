@@ -18,7 +18,11 @@ module.exports = function(config) {
 
   // Plugins
   config.addPlugin(EleventyRenderPlugin);
-  config.addPlugin(syntaxHighlight);
+  config.addPlugin(syntaxHighlight, {
+    codeAttributes: {
+      contenteditable: "true"
+    }
+  });
 
   // Shortcodes
   config.addAsyncShortcode("img", img);
