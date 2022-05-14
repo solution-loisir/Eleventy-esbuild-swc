@@ -1,5 +1,5 @@
 import { liveCodeResult } from "./custom-elements/live-code-result.js";
-import { exempleEditable } from "./custom-elements/exemple-editable";
+import { exempleEditable } from "./custom-elements/exemple-editable.js";
 import "@zachleat/details-utils";
 
 if(document.querySelector("live-code-result")) {

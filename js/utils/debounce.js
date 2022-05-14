@@ -3,7 +3,6 @@ function debounce(callback, delay = 250) {
 
   return function(...args) {
     clearTimeout(debounceTimer);
-
     debounceTimer = setTimeout(() => callback.apply(null, args), delay);
   }
 }
