@@ -1,6 +1,6 @@
 const esbuild = require("esbuild");
 
-const entryPoints = ["js/index.js"];
+const entryPoints = ["assets/js/index.js"];
 const outdir = "_site/js";
 
 const isProd = process.env.ELEVENTY_ENV === "prod";

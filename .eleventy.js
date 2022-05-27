@@ -3,14 +3,14 @@ const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 // Shortcodes
-const img = require("./shortcodes/img");
-const test = require("./shortcodes/test");
+const img = require("./_11ty/shortcodes/img");
+const codeExample = require("./_11ty/shortcodes/code-example");
 
 // Markdown
 const markdownIt = require('markdown-it');
 
 // Config
-const { configObject } = require("./src/_data/site");
+const configObject = require("./src/_data/config-11ty");
 
 module.exports = function(config) {
   // Passing through
@@ -18,15 +18,11 @@ module.exports = function(config) {
 
   // Plugins
   config.addPlugin(EleventyRenderPlugin);
-  config.addPlugin(syntaxHighlight, {
-    codeAttributes: {
-      contenteditable: "true"
-    }
-  });
+  config.addPlugin(syntaxHighlight);
 
   // Shortcodes
   config.addAsyncShortcode("img", img);
-  config.addAsyncShortcode("test", test);
+  config.addShortcode("codeExample", codeExample);
 
   // Libraries
   config.setLibrary('md', markdownIt ({

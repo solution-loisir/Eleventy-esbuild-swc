@@ -33,7 +33,7 @@ $xl: 75em;
 $font-base: Helvetica, Arial, sans-serif;
 
 // Border radius
-$radius-standard: 3px;
+$radius-standard: 5px;
 $radius-pill: 1em;
 $radius-round: 50%;
 
@@ -42,4 +42,4 @@ $width-large: 80ch;
 $width-medium: 65ch;
 
 // Shadow
-$shadow-card: 0 19px 38px #0000004d, 0 15px 12px #00000038;
+$shadow-card: 3px 3px 10px -2px #aaaaaa;
