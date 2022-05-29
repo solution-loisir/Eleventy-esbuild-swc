@@ -28,3 +28,7 @@
     }
   }
 }
+
+.flex-nav[data-margin-right='900'] {
+  --flex-nav-margin-right: #{tokens.$size-900};
+}

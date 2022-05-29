@@ -1,22 +1,25 @@
 @use "sass:color";
 
 $color-primary: #64e953;
+$color-secondary: #FD5A62;
+$color-white: #fff;
+
 $base-size: 1rem;
 
+// Custom properties
 :root {
   --color-primary: #{$color-primary};
-  --color-accent: #FD5A62;
-  --color-third: #E552AB;
-  --color-third-light-900: #{color.adjust(#E552AB, $lightness: 25%)};
-  --color-third-light-700: #{color.adjust(#E552AB, $lightness: 10%)};
-  --color-dark: #333333;
-  --color-light: #fcfcfc;
-  --color-white: #fff;
+  --color-accent: #{$color-secondary};
+  --color-dark: #{color.scale($color-primary, $lightness: -95%)};
+  --color-light: #{color.scale($color-primary, $lightness: 95%)};
+  --color-gray: #{color.scale($color-primary, $saturation: -95%, $lightness: 65%)};
+  --color-white: #{$color-white};
 }
 
 // Sizes
 $size-300: $base-size * 0.8;
 $size-400: $base-size * 1;
+$size-450: $base-size * 1.15;
 $size-500: $base-size * 1.25;
 $size-600: $base-size * 1.6;
 $size-700: $base-size * 2;
@@ -42,4 +45,4 @@ $width-large: 80ch;
 $width-medium: 65ch;
 
 // Shadow
-$shadow-card: 3px 3px 10px -2px #aaaaaa;
+$shadow-card: 3px 3px 10px -2px #aaaaaa, 0 0 0 -2px #aaaaaa;

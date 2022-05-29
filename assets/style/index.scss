@@ -1,11 +1,11 @@
 @use "tokens";
 @use "reset";
 @use "global";
+@use "blocks/page-header";
+@use "blocks/highlight";
+@use "blocks/flex-nav";
+@use "blocks/cards";
+@use "blocks/code-example";
+@use "utilities/grids";
 @use "utilities/flow";
 @use "utilities/wrapper";
-@use "layout-blocks/page-header";
-@use "layout-blocks/overlap-page-header";
-@use "layout-blocks/highlight";
-@use "components/flex-nav";
-@use "components/grids";
-@use "components/cards";

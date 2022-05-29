@@ -1,0 +1,20 @@
+@use "../tokens";
+
+.code-example {
+  background-color: var(--color-gray);
+  border-radius: tokens.$radius-standard;
+  display: flex;
+  flex-direction: column;
+  outline: 5px solid var(--color-gray);
+
+  iframe {
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+    border: 0;
+    outline: inherit;
+    background-color: var(--color-white);
+  }
+  summary {
+    font-weight: 700;
+  }
+}

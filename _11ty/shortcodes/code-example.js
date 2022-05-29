@@ -17,7 +17,7 @@ module.exports = ({ css, html, js }) => {
   :
   "";
 
-  return `<section class="code-example">
+  return `<section class="[ code-example ] [ wrapper ]">
   <h1>CODE EXAMPLE</h1>
 
   <details-utils animate>
@@ -33,8 +33,6 @@ module.exports = ({ css, html, js }) => {
   
   <h2>RESULT</h2>
 
-  <div class="frame-wrapper">
-    <iframe srcdoc='<style>${css}</style><div class="exemple-result-html">${html}</div><script>${js}</script>' sandbox="allow-scripts" seamless></iframe>
-  </div>
+  <iframe srcdoc='<style>${css}</style><div class="exemple-result-html">${html}</div><script>${js}</script>' sandbox="${js ? "allow-scripts" : ""}" seamless></iframe>
 </section>`;
 }

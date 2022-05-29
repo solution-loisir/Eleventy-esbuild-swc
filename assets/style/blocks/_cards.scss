@@ -1,7 +1,7 @@
 @use "../tokens";
 
 .card-standard,
-.card-standard-auto > * {
+.children-card-standard > * {
   display: flex;
   flex-direction: column;
   gap: tokens.$size-400;
@@ -10,5 +10,5 @@
   box-shadow: tokens.$shadow-card;
   padding: tokens.$size-400;
   background-color: var(--color-white);
-  outline: dashed;
+  outline: var(--card-outline-style, dashed);
 }
