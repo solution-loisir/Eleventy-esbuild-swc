@@ -2,6 +2,7 @@
 
 $color-primary: #64e953;
 $color-secondary: #FD5A62;
+$color-gray: color.scale($color-primary, $saturation: -95%, $lightness: 65%);
 $color-white: #fff;
 
 $base-size: 1rem;
@@ -12,7 +13,7 @@ $base-size: 1rem;
   --color-accent: #{$color-secondary};
   --color-dark: #{color.scale($color-primary, $lightness: -95%)};
   --color-light: #{color.scale($color-primary, $lightness: 95%)};
-  --color-gray: #{color.scale($color-primary, $saturation: -95%, $lightness: 65%)};
+  --color-gray: #{$color-gray};
   --color-white: #{$color-white};
 }
 
@@ -45,4 +46,9 @@ $width-large: 80ch;
 $width-medium: 65ch;
 
 // Shadow
-$shadow-card: 3px 3px 10px -2px #aaaaaa, 0 0 0 -2px #aaaaaa;
+$shadow-card: 3px 3px 10px -2px $color-gray, 0 0 0 -2px $color-gray;
+
+// Gradient function
+@function gradient180($color) {
+  @return linear-gradient(180deg, #{$color} 0%, #{color.scale($color, $lightness: -6%)} 12.5%, #{color.scale($color, $lightness: -12%)} 25%, #{color.scale($color, $lightness: -18%)} 37.5%, #{color.scale($color, $lightness: -24%)} 50%, #{color.scale($color, $lightness: -30%)} 62.5%, #{color.scale($color, $lightness: -36%)} 75%, #{color.scale($color, $lightness: -42%)} 87.5%, #{color.scale($color, $lightness: -48%)} 100%);
+}

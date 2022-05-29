@@ -1,8 +1,7 @@
 @use "../tokens";
 
 .highlight {
-  --flow-space: #{tokens.$size-700};
-  //color: var(--color-light);
-  background-color: var(--color-gray);
+  background: tokens.$color-primary;
+  background: tokens.gradient180(tokens.$color-primary); 
   min-height: 250px;
 }
