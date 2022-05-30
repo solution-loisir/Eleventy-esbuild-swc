@@ -11,7 +11,7 @@
   }
 }
 
-.wrapper[data-max-width='large'] {
+.wrapper[data-wrapper-max-width='large'] {
   --wrapper-measure: #{tokens.$width-large};
   --sm-wrapper-margin-right: #{tokens.$size-400};
   --sm-wrapper-margin-left: #{tokens.$size-400};
