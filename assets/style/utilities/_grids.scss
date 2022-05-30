@@ -3,5 +3,5 @@
 .grid-auto {
   display: grid;
   gap: tokens.$size-400;
-  grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
 }
