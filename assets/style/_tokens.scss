@@ -27,11 +27,11 @@ $size-700: $base-size * 2;
 $size-900: $base-size * 3;
 
 // Breakpoints
-$xs: 25em;
-$sm: 36em;
-$md: 48em;
-$lg: 62em;
-$xl: 75em;
+$xs: 25em; // ~400px
+$sm: 36em; // ~576px
+$md: 48em; // ~768px
+$lg: 62em; // ~992px
+$xl: 75em; // ~1200px
 
 // Font family
 $font-base: Helvetica, Arial, sans-serif;

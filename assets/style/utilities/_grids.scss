@@ -1,15 +1,7 @@
 @use "../tokens";
 
-.grid-auto-3 {
+.grid-auto {
   display: grid;
   gap: tokens.$size-400;
   grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
-  max-width: tokens.$width-large;
-  margin-right: tokens.$size-400;
-  margin-left: tokens.$size-400;
-
-  @media(min-width: tokens.$sm) {
-    margin-right: auto;
-    margin-left: auto;
-  }
 }

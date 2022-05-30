@@ -13,4 +13,5 @@
 
 .wrapper[data-max-width='large'] {
   max-width: var(--wrapper-measure, #{tokens.$width-large});
+
 }
