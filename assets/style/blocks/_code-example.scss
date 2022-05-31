@@ -1,19 +1,17 @@
 @use "../tokens";
 
 .code-example {
-  background-color: var(--color-gray);
-  border-radius: tokens.$radius-standard;
   display: flex;
   flex-direction: column;
-  outline: 5px solid var(--color-gray);
+  background-color: var(--color-gray);
+  border-radius: tokens.$radius-standard;
 
   iframe {
-    border-bottom-right-radius: inherit;
-    border-bottom-left-radius: inherit;
     border: 0;
-    outline: inherit;
+    border-radius: inherit;
     background-color: var(--color-white);
   }
+  
   summary {
     font-weight: 700;
   }
