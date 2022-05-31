@@ -1,23 +1,13 @@
 @use "../tokens";
 
 .wrapper {
-  max-width: tokens.$width-medium;
-  margin-right: tokens.$size-400;
-  margin-left: tokens.$size-400;
-
-  @media(min-width: tokens.$width-medium) {
-    margin-right: auto;
-    margin-left: auto;
-  }
+  margin-right: auto;
+  margin-left: auto;
+  width: clamp(25ch, 94vw, #{tokens.$width-medium});
+  padding: tokens.$size-400;
 }
 
-.wrapper-large {
-  max-width: tokens.$width-large;
-  margin-right: tokens.$size-400;
-  margin-left: tokens.$size-400;
-  @media(min-width: tokens.$width-large) {
-    margin-right: auto;
-    margin-left: auto;
-  }
+.wrapper[data-padding='0'] {
+  padding: 0;
 }
 

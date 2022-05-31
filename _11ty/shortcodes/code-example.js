@@ -17,7 +17,7 @@ module.exports = ({ css, html, js }) => {
   :
   "";
 
-  return `<section class="[ code-example ] [ wrapper padding-400 ]">
+  return `<section class="[ code-example ] [ wrapper ]">
   <h1>CODE EXAMPLE</h1>
 
   <details-utils animate>
