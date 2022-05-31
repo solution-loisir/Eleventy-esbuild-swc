@@ -2,19 +2,17 @@
 
 .page-header {
   display: flex;
-  flex-direction: column;
-  height: 40vh;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: tokens.$size-400;
+  padding-bottom: tokens.$size-400;
 
-  &__nav-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: tokens.$size-400;
-    padding-bottom: tokens.$size-400;
+  .page-header__logo {
+    padding-left: tokens.$size-900;
+  }
 
-    &--logo {
-      padding-left: tokens.$size-900;
-    }
+  @media(min-width: tokens.$sm) {
+    padding-right: tokens.$size-900;
   }
 }
