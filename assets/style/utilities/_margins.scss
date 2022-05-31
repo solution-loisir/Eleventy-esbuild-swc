@@ -1,0 +1,7 @@
+@use "../tokens";
+
+.sm-margin-right-900 {
+  @media(min-width: tokens.$sm) {
+    margin-right: tokens.$size-900;
+  }
+}

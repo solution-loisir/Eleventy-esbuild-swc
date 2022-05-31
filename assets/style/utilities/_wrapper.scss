@@ -1,20 +1,20 @@
 @use "../tokens";
 
 .wrapper {
-  max-width: var(--wrapper-measure, #{tokens.$width-medium});
-  margin-right: var(--wrapper-margin-right, #{tokens.$size-400});
-  margin-left: var(--wrapper-margin-left, #{tokens.$size-400});
+  max-width: tokens.$width-medium;
+  margin-right: tokens.$size-400;
+  margin-left: tokens.$size-400;
 
   @media(min-width: tokens.$width-medium) {
-    margin-right: var(--sm-wrapper-margin-right, auto);
-    margin-left: var(--sm-wrapper-margin-left, auto);
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
-.wrapper[data-wrapper-max-width='large'] {
-  --wrapper-measure: #{tokens.$width-large};
-  --sm-wrapper-margin-right: #{tokens.$size-400};
-  --sm-wrapper-margin-left: #{tokens.$size-400};
+.wrapper-large {
+  max-width: tokens.$width-large;
+  margin-right: tokens.$size-400;
+  margin-left: tokens.$size-400;
   @media(min-width: tokens.$width-large) {
     margin-right: auto;
     margin-left: auto;

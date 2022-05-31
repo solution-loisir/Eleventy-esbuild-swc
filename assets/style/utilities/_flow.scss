@@ -4,10 +4,6 @@
   margin-top: var(--flow-space, 1rem);
 }
 
-[data-flow-space='700'] {
-  --flow-space: #{tokens.$size-700};
-}
-
-[data-flow-space='900'] {
+.flow-space-900 {
   --flow-space: #{tokens.$size-900};
 }

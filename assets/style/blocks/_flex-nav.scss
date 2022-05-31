@@ -6,13 +6,9 @@
     flex-wrap: wrap;
     flex-direction: column;
     gap: tokens.$size-400;
-
+    
     @media(min-width: tokens.$sm) {
       flex-direction: row;
-      margin-top: var(--flex-nav-margin-top, unset);
-      margin-right: var(--flex-nav-margin-right, unset);
-      margin-bottom: var(--flex-nav-margin-bottom, unset);
-      margin-left: var(--flex-nav-margin-left, unset);
     }
   }
 
@@ -27,8 +23,4 @@
       width: initial;
     }
   }
-}
-
-.flex-nav[data-margin-right='900'] {
-  --flex-nav-margin-right: #{tokens.$size-900};
 }
