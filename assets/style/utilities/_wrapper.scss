@@ -7,6 +7,10 @@
   padding: tokens.$size-400;
 }
 
+.wrapper[data-size='large'] {
+  width: clamp(25ch, 94vw, #{tokens.$width-large});
+}
+
 .wrapper[data-padding='0'] {
   padding: 0;
 }
