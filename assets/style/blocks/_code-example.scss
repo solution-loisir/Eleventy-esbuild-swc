@@ -5,7 +5,8 @@
   flex-direction: column;
   background-color: var(--color-gray);
   border-radius: tokens.$radius-standard;
-  outline: dashed var(--color-dark);
+  //outline: dashed var(--color-dark);
+  box-shadow: tokens.$shadow-card;
 
   iframe {
     border: 0;
