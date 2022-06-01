@@ -2,6 +2,7 @@
 
 .highlight {
   background: tokens.$color-primary;
-  background: tokens.gradient(tokens.$color-primary); 
+  background: tokens.gradient(tokens.$color-primary);
+  color: var(--color-light);
   min-height: 250px;
 }

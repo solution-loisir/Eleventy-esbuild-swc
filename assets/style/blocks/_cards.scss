@@ -10,5 +10,5 @@
   box-shadow: tokens.$shadow-card;
   padding: tokens.$size-400;
   background-color: var(--color-white);
-  outline: var(--card-outline-style, dashed);
+  outline: dashed var(--color-dark);
 }

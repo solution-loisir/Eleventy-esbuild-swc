@@ -1,30 +1,28 @@
 @use "sass:color";
 
-$color-primary: #64e953;
+$color-primary: #0052cc;
 $color-secondary: #FD5A62;
-$color-gray: color.scale($color-primary, $saturation: -95%, $lightness: 65%);
 $color-white: #fff;
+$color-gray: color.scale($color-primary, $saturation: -85%, $lightness: 75%);
 
 $base-size: 1rem;
 
-// Custom properties
-:root {
-  --color-primary: #{$color-primary};
-  --color-accent: #{$color-secondary};
-  --color-dark: #{color.scale($color-primary, $lightness: -95%)};
-  --color-light: #{color.scale($color-primary, $lightness: 95%)};
-  --color-gray: #{$color-gray};
-  --color-white: #{$color-white};
-}
-
-// Sizes
+// Generic sizes
 $size-300: $base-size * 0.8;
 $size-400: $base-size * 1;
-$size-450: $base-size * 1.15;
 $size-500: $base-size * 1.25;
 $size-600: $base-size * 1.6;
 $size-700: $base-size * 2;
 $size-900: $base-size * 3;
+
+// Font sizes
+$size-h1: 2em;
+$size-h2: 1.6em;
+$size-h3: 1.2em;
+$text-base-size: $size-500;
+
+// Font families
+$font-base: Helvetica, Arial, sans-serif;
 
 // Breakpoints
 $xs: 25em; // ~400px
@@ -32,9 +30,6 @@ $sm: 36em; // ~576px
 $md: 48em; // ~768px
 $lg: 62em; // ~992px
 $xl: 75em; // ~1200px
-
-// Font family
-$font-base: Helvetica, Arial, sans-serif;
 
 // Border radius
 $radius-standard: 5px;

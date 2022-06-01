@@ -1,12 +1,40 @@
 @use "tokens";
+@use "sass:color";
+
+:root {
+  --color-primary: #{tokens.$color-primary};
+  --color-accent: #{tokens.$color-secondary};
+  --color-dark: #{color.scale(tokens.$color-primary, $lightness: -98%)};
+  --color-light: #{color.scale(tokens.$color-primary, $lightness: 98%)};
+  --color-gray: #{tokens.$color-gray};
+  --color-white: #{tokens.$color-white};
+}
 
 body {
   font-family: tokens.$font-base;
-  font-size: tokens.$size-450;
+  font-size: tokens.$text-base-size;
   color: var(--color-dark);
-  overflow-x: hidden;
-  padding-bottom: tokens.$size-900;
   background-color: var(--color-light);
+  padding-bottom: tokens.$size-900;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: tokens.$size-h1;
+}
+
+h2 {
+  font-size: tokens.$size-h2;
+}
+
+h3 {
+  font-size: tokens.$size-h3;
+}
+
+h1,
+h2,
+h3 {
+  font-family: tokens.$font-base;
 }
 
 main {

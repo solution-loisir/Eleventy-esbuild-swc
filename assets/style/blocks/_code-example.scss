@@ -5,6 +5,7 @@
   flex-direction: column;
   background-color: var(--color-gray);
   border-radius: tokens.$radius-standard;
+  outline: dashed var(--color-dark);
 
   iframe {
     border: 0;
@@ -14,5 +15,6 @@
   
   summary {
     font-weight: 700;
+    font-size: tokens.$size-h3;
   }
 }
