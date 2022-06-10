@@ -17,7 +17,7 @@ module.exports = ({ css, html, js }) => {
   :
   "";
 
-  return `<section class="[ code-example ] [ wrapper ]">
+  return `<section class="[ code-example ] [ wrapper ]" data-min-width="full">
   <h1>CODE EXAMPLE</h1>
 
   <details-utils animate>

@@ -3,6 +3,6 @@
 
 .grid-auto {
   display: grid;
-  gap: tokens.$size-400;
+  gap: tokens.$gap-sm;
   grid-template-columns: repeat(auto-fit, minmax(math.div(tokens.$sm, 3), 1fr));
 }

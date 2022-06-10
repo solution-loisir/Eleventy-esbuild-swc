@@ -4,11 +4,11 @@
 .children-card-standard > * {
   display: flex;
   flex-direction: column;
-  gap: tokens.$size-400;
   min-height: 200px;
   border-radius: tokens.$radius-standard;
   box-shadow: tokens.$shadow-card;
-  padding: tokens.$size-400;
+  padding-block: tokens.$size-600;
+  padding-inline: tokens.$padding-medium;
   background-color: var(--color-white);
   outline: dashed var(--color-dark);
 }

@@ -1,17 +1,21 @@
 @use "../tokens";
 
 .wrapper {
-  margin-right: auto;
-  margin-left: auto;
-  width: clamp(25ch, 94vw, #{tokens.$width-medium});
-  padding: tokens.$size-400;
+  margin-inline: auto;
+  width: min(var(--wrapper-min-width, #{tokens.$width-min}), var(--wrapper-max-width, #{tokens.$width-medium}));
+  padding-block: tokens.$size-600;
+  padding-inline: tokens.$padding-small;
 }
 
 .wrapper[data-size='large'] {
-  width: clamp(25ch, 94vw, #{tokens.$width-large});
+  --wrapper-max-width: #{tokens.$width-large};
 }
 
 .wrapper[data-padding='0'] {
-  padding: 0;
+  padding-block: 0;
+  padding-inline: 0;
 }
 
+.wrapper[data-min-width='full'] {
+  --wrapper-min-width: #{tokens.$width-full};
+}

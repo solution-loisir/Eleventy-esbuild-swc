@@ -16,10 +16,13 @@ $size-700: $base-size * 2;
 $size-900: $base-size * 3;
 
 // Font sizes
-$size-h1: 2em;
-$size-h2: 1.6em;
+$size-h1: 1.8em;
+$size-h2: 1.4em;
 $size-h3: 1.2em;
-$text-base-size: $size-500;
+$text-base-size: clamp(#{$size-500}, 2vw, #{$size-600});
+
+// Flow
+$flow-md: min(4rem, 8vh);
 
 // Font families
 $font-base: Helvetica, Arial, sans-serif;
@@ -36,9 +39,19 @@ $radius-standard: 5px;
 $radius-pill: 1em;
 $radius-round: 50%;
 
+// Padding
+$padding-small: clamp(1rem, 3%, 1.5rem);
+$padding-medium: clamp(1.5rem, 6%, 3rem);
+
+// Gap
+$gap-sm: clamp(1rem,   3vmax, 1.5rem);
+$gap-md: clamp(1.5rem, 6vmax,   3rem);
+
 // Width
 $width-large: 80ch;
 $width-medium: 65ch;
+$width-min: 94vw;
+$width-full: 100vw;
 
 // Shadow
 $shadow-card: 3px 3px 10px -2px $color-gray, 0 0 0 -2px $color-gray;

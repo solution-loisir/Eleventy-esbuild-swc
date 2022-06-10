@@ -5,14 +5,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-top: tokens.$size-400;
-  padding-bottom: tokens.$size-400;
+  padding-block: tokens.$padding-small;
 
   .page-header__logo {
-    padding-left: tokens.$size-900;
+    padding-inline-start: tokens.$padding-medium;
   }
 
   @media(min-width: tokens.$sm) {
-    padding-right: tokens.$size-900;
+    padding-inline-end: tokens.$padding-medium;
   }
 }
