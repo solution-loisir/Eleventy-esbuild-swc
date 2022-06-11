@@ -1,5 +1,5 @@
 @use "../tokens";
 
 .flow > * + * {
-  margin-block-start: var(--flow-space, tokens.$flow-md);
+  margin-block-start: var(--flow-space, tokens.$flow-space);
 }

@@ -5,13 +5,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-block: tokens.$padding-small;
+  padding-block: tokens.$padding-sm;
 
   .page-header__logo {
-    padding-inline-start: tokens.$padding-medium;
+    padding-inline-start: tokens.$padding-md;
   }
 
   @media(min-width: tokens.$sm) {
-    padding-inline-end: tokens.$padding-medium;
+    padding-inline-end: tokens.$padding-md;
   }
 }

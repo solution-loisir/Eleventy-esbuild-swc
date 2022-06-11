@@ -2,13 +2,13 @@
 
 .wrapper {
   margin-inline: auto;
-  width: min(var(--wrapper-min-width, #{tokens.$width-min}), var(--wrapper-max-width, #{tokens.$width-medium}));
-  padding-block: tokens.$size-600;
-  padding-inline: tokens.$padding-small;
+  width: min(var(--wrapper-min-width, #{tokens.$width-min}), var(--wrapper-max-width, #{tokens.$width-md}));
+  padding-block: tokens.$padding-md;
+  padding-inline: tokens.$padding-sm;
 }
 
 .wrapper[data-size='large'] {
-  --wrapper-max-width: #{tokens.$width-large};
+  --wrapper-max-width: #{tokens.$width-lg};
 }
 
 .wrapper[data-padding='0'] {

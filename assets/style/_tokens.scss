@@ -15,17 +15,15 @@ $size-600: $base-size * 1.6;
 $size-700: $base-size * 2;
 $size-900: $base-size * 3;
 
-// Font sizes
-$size-h1: 1.8em;
-$size-h2: 1.4em;
-$size-h3: 1.2em;
-$text-base-size: clamp(#{$size-500}, 2vw, #{$size-600});
+// Fonts
+$font-20: 2em;
+$font-15: 1.5em;
+$font-12: 1.2em;
+$font-base-size: clamp(1.25rem, 1.7vw, 1.5rem);
+$font-base-family: Helvetica, Arial, sans-serif;
 
 // Flow
-$flow-md: min(4rem, 8vh);
-
-// Font families
-$font-base: Helvetica, Arial, sans-serif;
+$flow-space: min(3rem, 6vh);
 
 // Breakpoints
 $xs: 25em; // ~400px
@@ -35,21 +33,22 @@ $lg: 62em; // ~992px
 $xl: 75em; // ~1200px
 
 // Border radius
-$radius-standard: 5px;
+$radius-std: 5px;
 $radius-pill: 1em;
 $radius-round: 50%;
 
 // Padding
-$padding-small: clamp(1rem, 3%, 1.5rem);
-$padding-medium: clamp(1.5rem, 6%, 3rem);
+$padding-sm: clamp(1rem, 3%, 1.5rem);
+$padding-md: clamp(1.5rem, 4%, 2rem);
+$padding-lg: clamp(2rem, 6%, 3rem);
 
 // Gap
 $gap-sm: clamp(1rem,   3vmax, 1.5rem);
-$gap-md: clamp(1.5rem, 6vmax,   3rem);
+$gap-md: clamp(1.5rem, 4vmax,   2rem);
 
 // Width
-$width-large: 80ch;
-$width-medium: 65ch;
+$width-lg: 80ch;
+$width-md: 65ch;
 $width-min: 94vw;
 $width-full: 100vw;
 
