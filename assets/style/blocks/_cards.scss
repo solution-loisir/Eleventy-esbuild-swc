@@ -4,7 +4,7 @@
 .children-card-standard > * {
   display: flex;
   flex-direction: column;
-  min-height: 200px;
+  min-height: tokens.$min-height;
   border-radius: tokens.$radius-std;
   box-shadow: tokens.$shadow-card;
   padding-block: tokens.$padding-sm;

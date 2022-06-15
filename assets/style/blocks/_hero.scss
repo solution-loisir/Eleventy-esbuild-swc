@@ -1,3 +1,5 @@
+@use "../tokens";
+
 .hero {
-  height: 90vh;
+  min-height: tokens.$min-height;
 }

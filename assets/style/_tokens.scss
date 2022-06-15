@@ -5,25 +5,23 @@ $color-secondary: #FD5A62;
 $color-white: #fff;
 $color-gray: color.scale($color-primary, $saturation: -85%, $lightness: 75%);
 
-$base-size: 1rem;
+//$base-size: 1rem;
 
 // Generic sizes
-$size-300: $base-size * 0.8;
-$size-400: $base-size * 1;
-$size-500: $base-size * 1.25;
-$size-600: $base-size * 1.6;
-$size-700: $base-size * 2;
-$size-900: $base-size * 3;
+$size-300: 0.8em;
+$size-400: 1em;
+$size-500: 1.2em;
+$size-600: 1.7em;
+$size-700: 2em;
+$size-800: 2.4em;
 
 // Fonts
-$font-20: 2em;
-$font-15: 1.5em;
-$font-12: 1.2em;
-$font-base-size: clamp(1.25rem, 1.7vw, 1.5rem);
+$font-base-size: clamp(1.2rem * 0.9, 0.46vw + 0.9rem, 1.2rem);
 $font-base-family: Helvetica, Arial, sans-serif;
 
 // Flow
-$flow-space: min(3rem, 6vh);
+$flow-space-sm: max(4vh, #{$size-500});
+$flow-space: max(6vh, #{$size-700});
 
 // Breakpoints
 $xs: 25em; // ~400px
@@ -38,19 +36,18 @@ $radius-pill: 1em;
 $radius-round: 50%;
 
 // Padding
-$padding-sm: clamp(1rem, 3%, 1.5rem);
-$padding-md: clamp(1.5rem, 4%, 2rem);
-$padding-lg: clamp(2rem, 6%, 3rem);
+$padding-sm: clamp(#{$size-400}, 3%, #{$size-500});
+$padding-md: clamp(#{$size-500}, 4%, #{$size-600});
+$padding-lg: clamp(#{$size-600}, 5%, #{$size-700});
 
 // Gap
-$gap-sm: clamp(1rem,   3vmax, 1.5rem);
-$gap-md: clamp(1.5rem, 4vmax,   2rem);
+$gap-sm: $size-500;
+$gap-md: $size-600;
 
-// Width
-$width-lg: 80ch;
-$width-md: 65ch;
-$width-min: 94vw;
-$width-full: 100vw;
+// Measures
+$width-md: min(65ch, var(--min-width, 94vw));
+$width-lg: min(80ch, var(--min-width, 94vw));
+$min-height: 250px;
 
 // Shadow
 $shadow-card: 3px 3px 10px -2px $color-gray, 0 0 0 -2px $color-gray;
