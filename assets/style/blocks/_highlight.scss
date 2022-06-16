@@ -1,8 +1,9 @@
 @use "../tokens";
+@use "../functions" as Func;
 
 .highlight {
   background: tokens.$color-primary;
-  background: tokens.gradient(tokens.$color-primary);
+  background: Func.gradient(tokens.$color-primary);
   color: var(--color-light);
   min-height: tokens.$min-height;
 }

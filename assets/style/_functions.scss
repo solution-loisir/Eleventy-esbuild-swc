@@ -1,0 +1,14 @@
+@use "sass:math";
+@use "sass:color";
+
+@function clampValues($maxSize, $minSize, $maxBreak: 80rem, $minBreak: 48rem) {
+  $slope: math.div($maxSize - $minSize, $maxBreak - $minBreak);
+  $slopeVw: 100 * $slope;
+  $yIntercept: $minSize - $slope * $minBreak;
+
+  @return #{$minSize}, #{$slopeVw}vw "+" #{$yIntercept}, #{$maxSize};
+}
+
+@function gradient($color, $orientation: 180deg) {
+  @return linear-gradient($orientation, #{$color} 0%, #{color.scale($color, $lightness: -6%)} 12.5%, #{color.scale($color, $lightness: -12%)} 25%, #{color.scale($color, $lightness: -18%)} 37.5%, #{color.scale($color, $lightness: -24%)} 50%, #{color.scale($color, $lightness: -30%)} 62.5%, #{color.scale($color, $lightness: -36%)} 75%, #{color.scale($color, $lightness: -42%)} 87.5%, #{color.scale($color, $lightness: -48%)} 100%);
+}

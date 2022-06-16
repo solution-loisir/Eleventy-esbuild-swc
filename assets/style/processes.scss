@@ -1,9 +1,0 @@
-@use "sass:math";
-
-@function clampValues($maxSize, $minSize, $maxBreak: 80rem, $minBreak: 48rem) {
-  $slope: math.div($maxSize - $minSize, $maxBreak - $minBreak);
-  $slopeVw: 100 * $slope;
-  $yIntercept: $minSize - $slope * $minBreak;
-
-  @return #{$minSize}, #{$slopeVw}vw "+" #{$yIntercept}, #{$maxSize};
-}

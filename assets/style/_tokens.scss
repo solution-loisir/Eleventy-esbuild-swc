@@ -1,5 +1,5 @@
 @use "sass:color";
-@use "./processes.scss" as P;
+@use "./functions" as Func;
 
 $color-primary: #0052cc;
 $color-secondary: #FD5A62;
@@ -25,10 +25,10 @@ $xl: 80em; // ~1280px
 
 // Fonts
 $min-font-base-size: $size-500 * 0.9;
-$font-xl: clamp(#{P.clampValues($size-800, $size-700)});
-$font-lg: clamp(#{P.clampValues($size-700, $size-600)});
-$font-md: clamp(#{P.clampValues($size-600, $size-500)});
-$font-base-size: clamp(#{P.clampValues($size-500, $min-font-base-size, 62rem, 36rem)});
+$font-xl: clamp(#{Func.clampValues($size-800, $size-700)});
+$font-lg: clamp(#{Func.clampValues($size-700, $size-600)});
+$font-md: clamp(#{Func.clampValues($size-600, $size-500)});
+$font-base-size: clamp(#{Func.clampValues($size-500, $min-font-base-size, 62rem, 36rem)});
 $font-base-family: Helvetica, Arial, sans-serif;
 
 // Flow
@@ -56,10 +56,3 @@ $min-height: 250px;
 
 // Shadow
 $shadow-card: 3px 3px 10px -2px $color-gray, 0 0 0 -2px $color-gray;
-
-// Gradient function
-@function gradient($color, $orientation: 180deg) {
-  @return linear-gradient($orientation, #{$color} 0%, #{color.scale($color, $lightness: -6%)} 12.5%, #{color.scale($color, $lightness: -12%)} 25%, #{color.scale($color, $lightness: -18%)} 37.5%, #{color.scale($color, $lightness: -24%)} 50%, #{color.scale($color, $lightness: -30%)} 62.5%, #{color.scale($color, $lightness: -36%)} 75%, #{color.scale($color, $lightness: -42%)} 87.5%, #{color.scale($color, $lightness: -48%)} 100%);
-}
-
-// Clamp values function
