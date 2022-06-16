@@ -16,26 +16,27 @@ body {
   font-size: tokens.$font-base-size;
   color: var(--color-dark);
   background-color: var(--color-light);
-  padding-bottom: tokens.$padding-md;
+  padding-bottom: tokens.$padding-lg;
   overflow-x: hidden;
 }
 
 h1 {
-  font-size: tokens.$size-700;
+  font-size: tokens.$font-xl;
 }
 
 h2 {
-  font-size: tokens.$size-600;
+  font-size: tokens.$font-lg;
 }
 
 h3 {
-  font-size: tokens.$size-500;
+  font-size: tokens.$font-md;
 }
 
 h1,
 h2,
 h3 {
   font-family: tokens.$font-base-family;
+  line-height: 1.2;
 }
 
 main {

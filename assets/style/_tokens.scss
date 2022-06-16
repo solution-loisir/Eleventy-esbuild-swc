@@ -1,34 +1,39 @@
 @use "sass:color";
+@use "./processes.scss" as P;
 
 $color-primary: #0052cc;
 $color-secondary: #FD5A62;
 $color-white: #fff;
 $color-gray: color.scale($color-primary, $saturation: -85%, $lightness: 75%);
 
-//$base-size: 1rem;
+$base-size: 1rem;
 
 // Generic sizes
-$size-300: 0.8em;
-$size-400: 1em;
-$size-500: 1.2em;
-$size-600: 1.7em;
-$size-700: 2em;
-$size-800: 2.4em;
-
-// Fonts
-$font-base-size: clamp(1.2rem * 0.9, 0.46vw + 0.9rem, 1.2rem);
-$font-base-family: Helvetica, Arial, sans-serif;
-
-// Flow
-$flow-space-sm: max(4vh, #{$size-500});
-$flow-space: max(6vh, #{$size-700});
+$size-300: $base-size * 0.8;
+$size-400: $base-size * 1;
+$size-500: $base-size * 1.2;
+$size-600: $base-size * 1.7;
+$size-700: $base-size * 2;
+$size-800: $base-size * 2.4;
 
 // Breakpoints
 $xs: 25em; // ~400px
 $sm: 36em; // ~576px
 $md: 48em; // ~768px
 $lg: 62em; // ~992px
-$xl: 75em; // ~1200px
+$xl: 80em; // ~1280px
+
+// Fonts
+$min-font-base-size: $size-500 * 0.9;
+$font-xl: clamp(#{P.clampValues($size-800, $size-700)});
+$font-lg: clamp(#{P.clampValues($size-700, $size-600)});
+$font-md: clamp(#{P.clampValues($size-600, $size-500)});
+$font-base-size: clamp(#{P.clampValues($size-500, $min-font-base-size, 62rem, 36rem)});
+$font-base-family: Helvetica, Arial, sans-serif;
+
+// Flow
+$flow-space-sm: max(4vh, #{$size-500});
+$flow-space: max(6vh, #{$size-700});
 
 // Border radius
 $radius-std: 5px;
@@ -36,13 +41,13 @@ $radius-pill: 1em;
 $radius-round: 50%;
 
 // Padding
-$padding-sm: clamp(#{$size-400}, 3%, #{$size-500});
-$padding-md: clamp(#{$size-500}, 4%, #{$size-600});
-$padding-lg: clamp(#{$size-600}, 5%, #{$size-700});
+$padding-sm: clamp(#{$size-400}, 5%, #{$size-500});
+$padding-md: clamp(#{$size-500}, 7%, #{$size-600});
+$padding-lg: clamp(#{$size-600}, 8%, #{$size-700});
 
 // Gap
-$gap-sm: $size-500;
-$gap-md: $size-600;
+$gap-sm: 1.2em;
+$gap-md: 1.7em;
 
 // Measures
 $width-md: min(65ch, var(--min-width, 94vw));
@@ -56,3 +61,5 @@ $shadow-card: 3px 3px 10px -2px $color-gray, 0 0 0 -2px $color-gray;
 @function gradient($color, $orientation: 180deg) {
   @return linear-gradient($orientation, #{$color} 0%, #{color.scale($color, $lightness: -6%)} 12.5%, #{color.scale($color, $lightness: -12%)} 25%, #{color.scale($color, $lightness: -18%)} 37.5%, #{color.scale($color, $lightness: -24%)} 50%, #{color.scale($color, $lightness: -30%)} 62.5%, #{color.scale($color, $lightness: -36%)} 75%, #{color.scale($color, $lightness: -42%)} 87.5%, #{color.scale($color, $lightness: -48%)} 100%);
 }
+
+// Clamp values function
