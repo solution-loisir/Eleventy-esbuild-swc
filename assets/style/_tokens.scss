@@ -25,9 +25,9 @@ $xl: 80em; // ~1280px
 
 // Fonts
 $min-font-base-size: $size-500 * 0.9;
-$font-xl: clamp(#{Func.clampValues($size-800, $size-700)});
-$font-lg: clamp(#{Func.clampValues($size-700, $size-600)});
-$font-md: clamp(#{Func.clampValues($size-600, $size-500)});
+//$font-xl: clamp(#{Func.clampValues($size-800, $size-700)});
+//$font-lg: clamp(#{Func.clampValues($size-700, $size-600)});
+//$font-md: clamp(#{Func.clampValues($size-600, $size-500)});
 $font-base-size: clamp(#{Func.clampValues($size-500, $min-font-base-size, 62rem, 36rem)});
 $font-base-family: Helvetica, Arial, sans-serif;
 

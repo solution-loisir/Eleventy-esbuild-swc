@@ -10,8 +10,4 @@
   .page-header__logo {
     padding-inline-start: tokens.$padding-md;
   }
-
-  @media(min-width: tokens.$sm) {
-    padding-inline-end: tokens.$padding-md;
-  }
 }

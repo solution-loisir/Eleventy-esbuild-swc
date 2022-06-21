@@ -2,6 +2,7 @@
 @use "sass:color";
 
 :root {
+  font-size: tokens.$font-base-size;
   /* Custom properties */
   --color-primary: #{tokens.$color-primary};
   --color-accent: #{tokens.$color-secondary};
@@ -13,7 +14,6 @@
 
 body {
   font-family: tokens.$font-base-family;
-  font-size: tokens.$font-base-size;
   color: var(--color-dark);
   background-color: var(--color-light);
   padding-bottom: tokens.$padding-lg;
@@ -21,15 +21,15 @@ body {
 }
 
 h1 {
-  font-size: tokens.$font-xl;
+  font-size: tokens.$size-700;
 }
 
 h2 {
-  font-size: tokens.$font-lg;
+  font-size: tokens.$size-600;
 }
 
 h3 {
-  font-size: tokens.$font-md;
+  font-size: tokens.$size-500;
 }
 
 h1,
