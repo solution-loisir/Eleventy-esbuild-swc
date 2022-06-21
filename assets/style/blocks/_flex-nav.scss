@@ -1,15 +1,9 @@
 @use "../tokens";
 
 .flex-nav {
-  width: 100%;
-  padding-inline: tokens.$padding-md;
-  @media(min-width: tokens.$sm) {
-    width: initial;
-  }
-
   ul {
     display: flex;
     flex-wrap: wrap;
-    gap: tokens.$gap-sm; 
+    gap: tokens.$size-400 
   }
 }

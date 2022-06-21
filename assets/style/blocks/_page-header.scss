@@ -5,9 +5,14 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: tokens.$size-300;
   padding-block: tokens.$padding-sm;
+  padding-inline: tokens.$padding-md;
 
-  .page-header__logo {
-    padding-inline-start: tokens.$padding-md;
+  .page-header__nav {
+    width: 100%;
+    @media(min-width: tokens.$sm) {
+      width: initial;
+    }
   }
 }
