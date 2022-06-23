@@ -8,11 +8,5 @@
   gap: tokens.$size-300;
   padding-block: tokens.$padding-sm;
   padding-inline: tokens.$padding-md;
-
-  .page-header__nav {
-    width: 100%;
-    @media(min-width: tokens.$sm) {
-      width: initial;
-    }
-  }
+  box-shadow: tokens.$shadow-bottom;
 }

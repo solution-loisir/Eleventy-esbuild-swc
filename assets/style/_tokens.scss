@@ -48,4 +48,5 @@ $width-lg: min(80ch, var(--min-width, 94vw));
 $min-height: 250px;
 
 // Shadow
-$shadow-card: 3px 3px 10px -2px $color-gray, 0 0 0 -2px $color-gray;
+$shadow-card: 3px 3px 10px -3px $color-gray, 0 0 0 -3px $color-gray;
+$shadow-bottom: 3px 3px 10px -3px $color-gray;
