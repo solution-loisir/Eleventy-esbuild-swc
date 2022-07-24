@@ -8,13 +8,14 @@ const codeExample = require("./_11ty/shortcodes/code-example");
 
 // Markdown
 const markdownIt = require('markdown-it');
+const markdownItEleventyImg = require("./markdown-it/markdown-it-eleventy-img")
 
 // Config
 const configObject = require("./src/_data/config-11ty");
 
 module.exports = function(config) {
   // Passing through
-  config.addPassthroughCopy("images");
+  config.addPassthroughCopy({ "assets/images": "images" });
 
   // Plugins
   config.addPlugin(EleventyRenderPlugin);
@@ -29,7 +30,12 @@ module.exports = function(config) {
     html: true,
     breaks: true,
     linkify: true
-  }).disable("code"));
+  })
+  .use(markdownItEleventyImg, {
+    widths: [800, 500, 300],
+    lazy: false
+  })
+  .disable("code"));
 
    // Configuration
   return configObject;

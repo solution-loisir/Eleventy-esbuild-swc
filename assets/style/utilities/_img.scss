@@ -1,0 +1,10 @@
+@use "../tokens";
+
+.image {
+  box-shadow: tokens.$shadow-card;
+  border-radius: tokens.$radius-std;
+}
+
+.md-image {
+  max-width: 575px;
+}

@@ -3,7 +3,7 @@
 
 :root {
   font-size: tokens.$font-base-size;
-  /* Custom properties */
+  /* Global custom properties */
   --color-primary: #{tokens.$color-primary};
   --color-accent: #{tokens.$color-secondary};
   --color-dark: #{color.scale(tokens.$color-primary, $lightness: -98%)};

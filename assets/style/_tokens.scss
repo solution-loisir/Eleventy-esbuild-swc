@@ -17,15 +17,15 @@ $size-700: $base-size * 2;
 $size-800: $base-size * 2.4;
 
 // Breakpoints
-$xs: 25em; // ~400px
-$sm: 36em; // ~576px
-$md: 48em; // ~768px
-$lg: 62em; // ~992px
-$xl: 80em; // ~1280px
+$xs: 25rem; // ~400px
+$sm: 36rem; // ~576px
+$md: 48rem; // ~768px
+$lg: 62rem; // ~992px
+$xl: 80rem; // ~1280px
 
 // Fonts
 $min-font-base-size: $size-500 * 0.9;
-$font-base-size: clamp(#{Func.clampValues($size-500, $min-font-base-size, 62rem, 36rem)});
+$font-base-size: clamp(#{Func.clampValues($size-500, $min-font-base-size, $lg, $sm)});
 $font-base-family: Helvetica, Arial, sans-serif;
 
 // Flow
