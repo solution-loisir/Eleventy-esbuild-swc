@@ -8,7 +8,7 @@ const codeExample = require("./_11ty/shortcodes/code-example");
 
 // Markdown
 const markdownIt = require('markdown-it');
-const markdownItEleventyImg = require("./markdown-it/markdown-it-eleventy-img")
+const markdownItEleventyImg = require("./markdown-it/markdown-it-eleventy-img");
 
 // Config
 const configObject = require("./src/_data/config-11ty");
