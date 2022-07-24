@@ -12,10 +12,14 @@ module.exports = function markdownItEleventyImg(md, {
 } = {}) {
 
   md.renderer.rules.image  = (tokens, index, options, env, renderer) => {
+    // This function will be passed to a rendering loop for markdown-it image rules, 
+    // it as to be written as an implicit loop.
     const token = tokens[index];
     const src = token.attrGet("src");
     const srcPath = path.join("assets", src);
-    // Oddly, `alt` value is in the `content` property.
+    // Oddly, `alt` value is in the `content` property 
+    // and can't be retrieved with the `attrGet` method 
+    // like the other attributes.
     const alt = token.content;
     const title = token.attrGet("title") || "";
 
