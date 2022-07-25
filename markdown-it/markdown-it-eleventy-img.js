@@ -20,10 +20,11 @@ const findLazyFlag = title => {
 
 module.exports = function markdownItEleventyImg(md, {
   widths = [300, 600],
+  urlPath = "/images/",
+  output = "_site",
   baseFormat = "jpeg",
   optimalFormat = ["avif", "webp"],
-  baseClass = "image md-image",
-  addClass = "",
+  imgClass = "image md-image",
   sizes = "100vw"
 } = {}) {
 
@@ -45,7 +46,7 @@ module.exports = function markdownItEleventyImg(md, {
     const imageAttributes = {
       alt,
       sizes,
-      class: addClass ? `${baseClass} ${addClass}` : baseClass,
+      class: imgClass,
       loading: isLazy ? "lazy" : "auto",
       decoding: "async"
     }
@@ -57,8 +58,8 @@ module.exports = function markdownItEleventyImg(md, {
     const eleventyImageOptions = {
       widths,
       formats: [...optimalFormat, baseFormat],
-      urlPath: "/images/",
-      outputDir: path.join("_site", "images")
+      urlPath,
+      outputDir: path.join(output, urlPath)
     }
 
     Image(srcPath, eleventyImageOptions);
