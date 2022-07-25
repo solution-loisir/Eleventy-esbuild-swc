@@ -32,8 +32,7 @@ module.exports = function(config) {
     linkify: true
   })
   .use(markdownItEleventyImg, {
-    widths: [800, 500, 300],
-    lazy: false
+    widths: [800, 500, 300]
   })
   .disable("code"));
 
