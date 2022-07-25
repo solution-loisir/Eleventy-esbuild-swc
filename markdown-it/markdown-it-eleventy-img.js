@@ -12,7 +12,7 @@ module.exports = function markdownItEleventyImg(md, {
 } = {}) {
 
   md.renderer.rules.image  = (tokens, index, options, env, renderer) => {
-    // This function will be passed to a rendering loop for markdown-it image rules, 
+    // This function will be passed to a rendering loop, 
     // it as to be written as an implicit loop.
     const token = tokens[index];
     const src = token.attrGet("src");
