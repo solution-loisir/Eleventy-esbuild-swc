@@ -1,3 +1,5 @@
+const path = require("path");
+
 // Plugins
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -32,7 +34,16 @@ module.exports = function(config) {
     linkify: true
   })
   .use(markdownItEleventyImg, {
-    widths: [800, 500, 300]
+    options: {
+      widths: [800, 500, 300],
+      urlPath: "/images/",
+      outputDir: path.join("_site", "images"),
+      formats: ["avif", "webp", "jpeg"]
+    },
+    attributes: {
+      class: "image markdown-image",
+      decoding: "async"
+    }
   })
   .disable("code"));
 

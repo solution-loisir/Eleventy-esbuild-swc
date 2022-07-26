@@ -3,9 +3,9 @@ const path = require("path");
 
 const findLazyFlag = title => {
 
-  const isLazy = title.match(/^(%lazy%)/i) ? true : false;
+  let titleText = title.trim();
 
-  let titleText = title;
+  const isLazy = titleText.match(/^(%lazy%)/i) ? true : false;
 
   if(isLazy) {
     const titleIndex = title.lastIndexOf("%") + 1;
@@ -19,52 +19,36 @@ const findLazyFlag = title => {
 }
 
 module.exports = function markdownItEleventyImg(md, {
-  widths = [300, 600],
-  urlPath = "/images/",
-  output = "_site",
-  baseFormat = "jpeg",
-  optimalFormat = ["avif", "webp"],
-  imgClass = "image md-image",
-  sizes = "100vw"
+  options = {},
+  attributes = {}
 } = {}) {
 
-  md.renderer.rules.image  = (tokens, index, options, env, renderer) => {
-    // This function will be passed to a rendering loop, 
-    // it as to be written as an implicit loop.
+  md.renderer.rules.image  = (tokens, index, rendererOptions, env, renderer) => {
+
     const token = tokens[index];
 
     const src = token.attrGet("src");
     const srcPath = path.join("assets", src);
-    // Oddly, `alt` value is in the `content` property 
-    // and can't be retrieved with the `attrGet` method 
-    // like the other attributes.
-    const alt = token.content;
 
     const title = token.attrGet("title") || "";
-    const {isLazy, titleText} = findLazyFlag(title);
+    const { isLazy, titleText } = findLazyFlag(title);
 
-    const imageAttributes = {
-      alt,
-      sizes,
-      class: imgClass,
-      loading: isLazy ? "lazy" : "auto",
-      decoding: "async"
+    const defaultAttributes = {
+      alt: token.content,
+      sizes: "100vw"
     }
-
     if(titleText) {
-      imageAttributes.title = titleText;
+      defaultAttributes.title = titleText;
+    }
+    if(isLazy) {
+      defaultAttributes.loading = "lazy";
     }
 
-    const eleventyImageOptions = {
-      widths,
-      formats: [...optimalFormat, baseFormat],
-      urlPath,
-      outputDir: path.join(output, urlPath)
-    }
+    const imageAttributes = { ...defaultAttributes, ...attributes }
+    
+    Image(srcPath, options);
 
-    Image(srcPath, eleventyImageOptions);
-
-    const metadata = Image.statsSync(srcPath, eleventyImageOptions);
+    const metadata = Image.statsSync(srcPath, options);
     const imageMarkup = Image.generateHTML(metadata, imageAttributes, {
       whitespaceMode: "inline"
     });
