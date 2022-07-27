@@ -42,7 +42,8 @@ module.exports = function(config) {
     },
     attributes: {
       class: "image markdown-image",
-      decoding: "async"
+      decoding: "async",
+      sizes: "100vw"
     }
   })
   .disable("code"));
