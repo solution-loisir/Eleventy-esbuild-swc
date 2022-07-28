@@ -10,7 +10,7 @@ const codeExample = require("./_11ty/shortcodes/code-example");
 
 // Markdown
 const markdownIt = require('markdown-it');
-const markdownItEleventyImg = require("./markdown-it/markdown-it-eleventy-img");
+const markdownItEleventyImg = require("markdown-it-eleventy-img");
 
 // Config
 const configObject = require("./src/_data/config-11ty");
@@ -43,7 +43,8 @@ module.exports = function(config) {
     attributes: {
       class: "image markdown-image",
       decoding: "async",
-      sizes: "100vw"
+      sizes: "100vw",
+      alt: "Other alt."
     }
   })
   .disable("code"));
