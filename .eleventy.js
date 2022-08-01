@@ -34,18 +34,19 @@ module.exports = function(config) {
     linkify: true
   })
   .use(markdownItEleventyImg, {
-    options: {
+    imgOptions: {
       widths: [800, 500, 300],
       urlPath: "/images/",
       outputDir: path.join("_site", "images"),
       formats: ["avif", "webp", "jpeg"]
     },
-    attributes: {
+    globalAttributes: {
       class: "image markdown-image",
       decoding: "async",
       sizes: "100vw",
       alt: "Other alt."
-    }
+    },
+    renderImage: require("./build-tasks/markdown-render-img")
   })
   .disable("code"));
 
