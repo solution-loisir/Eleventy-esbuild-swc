@@ -11,6 +11,7 @@ const codeExample = require("./_11ty/shortcodes/code-example");
 // Markdown
 const markdownIt = require('markdown-it');
 const markdownItEleventyImg = require("markdown-it-eleventy-img");
+const markdownItAttrs = require("markdown-it-attrs");
 
 // Config
 const configObject = require("./src/_data/config-11ty");
@@ -33,6 +34,7 @@ module.exports = function(config) {
     breaks: true,
     linkify: true
   })
+  .use(markdownItAttrs)
   .use(markdownItEleventyImg, {
     imgOptions: {
       widths: [800, 500, 300],
@@ -44,7 +46,7 @@ module.exports = function(config) {
       class: "image markdown-image",
       decoding: "async",
       sizes: "100vw",
-      alt: "Other alt."
+      loading: "auto"
     },
     renderImage: require("./build-tasks/markdown-render-img")
   })

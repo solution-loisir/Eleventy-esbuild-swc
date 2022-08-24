@@ -1,6 +1,6 @@
 module.exports = (image, attributes) => {
   const [ Image, options ] = image;
-  const [ attrs, src ] = attributes;
+  const [ src, attrs ] = attributes;
 
   Image(src, options);
 
