@@ -1,0 +1,29 @@
+---
+layout: layouts/page.njk
+title: About
+data:
+  - Item 1
+  - Item 2
+  - Item 3
+nav:
+- link: "/"
+  name: Home
+- link: "/about/"
+  name: About
+---
+<style @raw="getCss(page.url)" webc:keep></style>
+<h1 @text="title"></h1>
+
+<page-title @title="title"></page-title>
+
+<page-nav @context="title"></page-nav>
+
+<p @html="data"></p>
+
+<ul>
+  <template webc:type="11ty" 11ty:type="njk">
+    {% for item in data %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </template>
+</ul>

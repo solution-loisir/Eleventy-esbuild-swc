@@ -1,0 +1,11 @@
+<style>
+ body {
+  width: 100%;
+ }
+</style>
+<nav>
+  <ul>
+    <li @text=context></li>
+  </ul>
+</nav>
+<p @text=context></p>

@@ -1,0 +1,6 @@
+<style webc:scoped>
+  h1 {
+    color: green;
+  }
+</style>
+<h1 @text=title></h1>

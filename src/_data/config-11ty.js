@@ -7,5 +7,5 @@ module.exports = {
   dataTemplateEngine: "njk",
   htmlTemplateEngine: "njk",
   markdownTemplateEngine: "njk",
-  templateFormats: ["njk", "md", "html"]
+  templateFormats: ["njk", "md", "html", "liquid", "11ty.js"]
 }
